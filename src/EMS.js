@@ -10,6 +10,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
+import { hostName } from "./dummyData";
 
 export default function EMS() {
   const [employeeDetails, setEmployeeDetails] = React.useState({
@@ -32,12 +33,16 @@ export default function EMS() {
     });
   };
 
-  const isLocalActive = true;
+  console.log(hostName, "hostName in employeepage page");
 
-  const hostName =
-    window.location.hostname?.includes("localhost") && isLocalActive
-      ? process.env.REACT_APP_HOST_NAME_LOCAL
-      : process.env.REACT_APP_HOST_NAME_LIVE;
+  // const url = window.location;
+  // const parsedUrl = new URL(url);
+
+  // const hostName = ["localhost:8080", "poizerahul.netlify.app"]?.includes(
+  //   parsedUrl?.host
+  // )
+  //   ? process.env.REACT_APP_HOST_NAME_LIVE
+  //   : process.env.REACT_APP_HOST_NAME_LOCAL;
 
   const addEmployee = async () => {
     try {

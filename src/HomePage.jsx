@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Skills, personalInfo, education, Exprience } from "./dummyData";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // also show salary
 // resume pdf download
@@ -12,6 +13,21 @@ export default function HomePage() {
 
   return (
     <Box style={{ padding: "2% 5%" }}>
+      <div className="App">
+        <motion.h1
+          animate={{ x: [50, 150, 50], opacity: 1, scale: 1 }}
+          transition={{
+            duration: 5,
+            delay: 0.3,
+            ease: [0.5, 0.71, 1, 1.5],
+          }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileHover={{ scale: 1.2 }}
+          style={{ color: "red", fontSize: "24px" }}
+        >
+          In Progress. For any issue and updated Info, Please Download Resume.
+        </motion.h1>
+      </div>
       <Typography sx={{ fontWeight: "bold", fontSize: "54px" }}>
         Rahul Sharma
       </Typography>
